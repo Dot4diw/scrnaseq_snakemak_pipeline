@@ -8,13 +8,13 @@
 #   N/threads equals the number of parallel tasks.
 
 config = {
-                "samplepath": "/scRNAseq/F25A018152623/Fq",
-                "workpath": "/scRNAseq/F25A018152623/Fq/0_analysis/0_align",
+                "samplepath": "rawdata/Fq",
+                "workpath": "rawdata/Fq/0_analysis/0_align",
                 "genome": "/database/REFDB_OF_DNBC4TOOLS/GRCm39",
-                "threads": 8
+                "threads": 12
                 }
 
-SAMPLES = ["CTRL_HNYD619F","CTRL_HNYD879F","CTR_mockYD702F","CTR_mockYD806F","KO_HNYD748F","KO_HNYD752F","KO_mockYD755F","KO_mockYD860F"]
+SAMPLES = ["CTLR_A","CTLR_B","CTRL_C","CTRL_D","KO_A","KO_B","KO_C","KO_D"]
 
 rule all:
         input:
