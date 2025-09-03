@@ -9,12 +9,12 @@ threads=${3}
 fq1=$(ls ${samplepath}/*1.fq.gz | paste -sd ',')
 fq2=$(ls ${samplepath}/*2.fq.gz | paste -sd ',')
 
-oligopath=$(echo "${curentpath%_cDNA*}_oligo")
+oligopath="${samplepath%_cDNA*}_oligo"
 
 samplename=$(basename ${samplepath} | sed 's/_cDNA//g')
 
-oligo1="${oligopath}/*oligo_1.fq.gz"
-oligo2="${oligopath}/*oligo_2.fq.gz"
+oligo1="${oligopath}/${samplename}_oligo_1.fq.gz"
+oligo2="${oligopath}/${samplename}_oligo_2.fq.gz"
 
 $dnbc4tools rna run \
         --cDNAfastq1 ${fq1} \
